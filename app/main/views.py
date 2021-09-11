@@ -20,3 +20,17 @@ def index():
     title = "News"
 
     return render_template('index.html', title=title, business_sources=business_sources, sports_sources=sports_sources, health_sources=health_sources, technology_sources=technology_sources, entertainment_sources=entertainment_sources)
+
+
+
+@main.route('/sources/<id>')
+def articles(id):
+
+    '''
+    View root page function that returns the articles page and its data
+    '''
+    
+    articles =get_articles(id)
+    title = f'{id}'
+
+    return render_template('articles.html', articles=articles, title=title)
