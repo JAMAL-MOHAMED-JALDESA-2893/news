@@ -16,7 +16,7 @@
 * `Extract` the cloned file in the directory you cloned it.
 * using `terminal` navigate to the cloned folder/directory :`cd news`
 * open the folder using code editor .
-* using editors terminal run ```/start.sh``` file cloned from github.
+* using editors terminal run ```./start.sh``` file cloned from github.
 * Open the application on your browser 127.0.0.1:5000
 
 ## Technology used
