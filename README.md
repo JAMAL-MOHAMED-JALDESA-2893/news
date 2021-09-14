@@ -25,6 +25,7 @@
 * Python3.8
 * Flask
 * Heroku
+* bootstrap
 
 ## Known Bugs
 
