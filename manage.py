@@ -4,10 +4,10 @@ from flask_script import Manager,Server
 # Creating app instance
 app = create_app('development')
 
-manager = Manager(app)
-manager.add_command('server',Server)
+manage = Manager(app)
+manage.add_command('server',Server)
 
-@manager.command
+@manage.command
 def test():
     """Run the unit tests."""
     import unittest
@@ -16,4 +16,4 @@ def test():
 
 
 if __name__ == '__main__':
-    manager.run()
+    manage.run()
