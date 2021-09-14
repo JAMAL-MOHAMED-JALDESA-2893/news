@@ -1,1 +1,35 @@
+{% extends 'base.html' %}
 {% import 'macros.html' as macro %}
+
+{% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Entertainment News  -->
+<h2 class="text text-center text-danger" style='font-style: italic;font: weight 900px;'>Entertainment News bulletin</h2>
+    {{ macro.displaySourceList(entertainment_sources)}}
+
+ <!-- Health News  -->
+<h2 class="text text-center text-danger" style="font-style:italic;font-weight:900px">Health News bulletin </h2>
+{{ macro.displaySourceList(health_sources)}}
+
+<!-- Business News  -->
+<h2 class="text text-center text-danger" style="font-style:italic;font-weight:900px">Business News bulletin</h2>
+    {{ macro.displaySourceList(business_sources)}}
+
+
+
+<!-- Technology News  -->
+<h2 class="text text-center text-danger" style="font-style:italic;font-weight:900px">Technology News bulletin</h2>
+    {{ macro.displaySourceList(technology_sources)}}
+
+<!-- Sport News  -->
+    <h2 class="text text-center text-danger" style="font-style: italic;font-weight:900px">Sports News bulletin</h2>
+    {{ macro.displaySourceList(sports_sources)}}
+
+{% endblock %}
